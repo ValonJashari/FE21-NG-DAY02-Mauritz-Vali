@@ -1,0 +1,13 @@
+<form [formGroup]="contact" (ngSubmit)="onSubmit()">
+<label>
+    First Name:
+    <input type="text" formControlName="firstName">
+    Last Name:
+    <input type="text" formControlName="lastName">
+</label>
+<label>
+    Which car would you like to enquire about?
+    <input type="textfield" formControlName="carQuestion">
+</label><br>
+<input type="submit" value="Send your contact request!">
+</form>
