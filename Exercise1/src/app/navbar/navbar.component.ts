@@ -9,7 +9,7 @@ export class NavbarComponent implements OnInit {
     navTitle: string;
     donation: number = 0;
   constructor() {
-    this.navTitle = "Exercise 1 "
+    this.navTitle = "Car Dealership"
    }
    donationCounter(){
     this.donation = this.donation + 10;

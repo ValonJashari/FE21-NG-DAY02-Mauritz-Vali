@@ -1,14 +1,30 @@
-<div *ngFor = "let car of cars">
-    <p>{{car.name}}</p>
-    <p><img src="{{car.image}}" width="200"></p>
+<div id="form">
+    <h3>Welcome to the usedCars Dealership! Below you can submit a car!</h3>
+    <form [formGroup]="addCar" (submit)="submitCar()">
+        <label>
+            Car Brand:
+            <input type="text" formControlName="name">
+            Car Img:
+            <input type="text" formControlName="image">
+            Description of your car:
+            <input type="text" formControlName="description">
+            <br>
+            <br>
+            <input class="submitButton" type="submit" value="Submit your car!">
+        </label>
+    </form>
+    </div>
+
+
+<div id="usedCars" class="row">
+    <h2>Here we have some of our used Cars</h2>
+<div class="card cars" style="width: 18rem;" *ngFor = "let car of cars">
+    <img src="{{car.image}}" class="card-img-top h-75 w-100" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{car.name}}</h5>
+      <p class="card-text">{{car.description}}</p>
+      <!-- <a href="#" class="btn btn-primary">{{displayPrice}}</a> -->
+    </div>
+  </div>
 </div>
 
-<form [formGroup]="addCar" (submit)="submitCar()">
-    <label>
-        Car Brand:
-        <input type="text" formControlName="carBrand">
-        Car Img:
-        <input type="text" formControlName="carImg">
-        <input type="submit" value="Submit your car!">
-    </label>
-</form>
