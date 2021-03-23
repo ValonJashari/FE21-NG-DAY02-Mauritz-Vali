@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'main',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+    addCar = new FormArray({
+        carBrand: new FormControl('', Validators.required),
+        carImg: new FormControl('', Validators.required)
+    })
+
   cars = [{
     name: "BMW",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.carscoops.com%2Fwp-content%2Fuploads%2F2019%2F10%2Feb7e57a6-bmw-m8-competition.jpg&f=1&nofb=1"
@@ -17,11 +23,15 @@ export class MainComponent implements OnInit {
     name: "Citroen",
     image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8a%2FCitroen_2CV_1X7A7979.jpg%2F1200px-Citroen_2CV_1X7A7979.jpg&f=1&nofb=1"
   }]
-
     
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
+
+  submitCar(){
+    if (this.addCar){
+  }
+}
 
 }

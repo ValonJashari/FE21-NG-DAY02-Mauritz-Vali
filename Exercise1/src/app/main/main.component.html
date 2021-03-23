@@ -2,3 +2,13 @@
     <p>{{car.name}}</p>
     <p><img src="{{car.image}}" width="200"></p>
 </div>
+
+<form [formGroup]="addCar" (submit)="submitCar()">
+    <label>
+        Car Brand:
+        <input type="text" formControlName="carBrand">
+        Car Img:
+        <input type="text" formControlName="carImg">
+        <input type="submit" value="Submit your car!">
+    </label>
+</form>
