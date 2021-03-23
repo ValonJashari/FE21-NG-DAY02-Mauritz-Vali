@@ -42,6 +42,7 @@ export class MainComponent implements OnInit {
       let userSubmission = this.addCar.value
       this.cars.push(userSubmission)
       console.log(userSubmission);
+      this.addCar.FormGroup
   }
 }
 
