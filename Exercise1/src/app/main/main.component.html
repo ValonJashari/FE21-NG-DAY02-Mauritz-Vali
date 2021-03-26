@@ -3,7 +3,7 @@
     <form [formGroup]="addCar" (submit)="submitCar()">
         <label>
             Car Brand:
-            <input type="text" [(ngModel)]="name">
+            <input type="text" formControlName="name">
             Car Img:
             <input type="text" formControlName="image">
             Description of your car:
